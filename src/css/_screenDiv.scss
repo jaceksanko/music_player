@@ -1,0 +1,10 @@
+@mixin screenDiv {
+	width: 360px;
+	height: 480px;
+	background-color: rgb(243, 244, 248);
+	border-radius: 30px;
+	margin: 20px 10px;
+	@media (max-width: 360px) {
+		width: 340px;
+	}
+}
