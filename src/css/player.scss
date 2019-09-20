@@ -1,21 +1,27 @@
 @import 'screenDiv';
 $topMenuColor: rgb(255, 255, 255);
 
-.player {
-  @include screenDiv;
-}
-
-.headerPlayer {
-  background-color: rgb(42, 34, 77);
-  opacity: 0.6;
-  //width: 360px;
-  height: 65px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+@mixin justifyCenter {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.player {
+  @include screenDiv;
   position: relative;
+}
+
+.headerPlayer {
+  width: 100%;
+  background-color: rgb(42, 34, 77);
+  opacity: 0.6;
+  height: 65px;
+  border: none;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  @include justifyCenter;
+  position: absolute;
   .topOptions {
     .random,
     .redo,
@@ -26,13 +32,106 @@ $topMenuColor: rgb(255, 255, 255);
       margin: 0 20px;
     }
   }
-
   .hamburgerMenu {
     position: absolute;
     right: 20px;
-    fill: $topMenuColor;
-    width: 17px;
-    height: 14px;
-    opacity: 0.302;
+    svg {
+      fill: $topMenuColor;
+      width: 17px;
+      height: 14px;
+    }
+    .opacityHamburgerMenu {
+      opacity: 0.302;
+    }
+
   }
 }
+
+.footerPlayer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 140px;
+  background-color: rgb(238,239,245);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    border-radius: 50%;
+    border: none;
+    outline: inherit;
+  }
+  .share, .favorite {
+    @include justifyCenter;
+    width: 35px;
+    height: 35px;
+
+   }
+  .share {
+    margin-left: 20px;
+    svg {
+      width: 13px;
+      height: 13px;
+    }
+    path {
+      fill: rgb(96, 85, 143);
+    }
+    &:hover {
+      background-color: rgb(96, 85, 143);
+      path {
+        fill: white;
+      }
+    }
+    &:active {
+      opacity: 0.7;
+    }
+  }
+  .favorite {
+    margin-right: 20px;
+    svg {
+      width: 15px;
+      height: 12px;
+    }
+    path {
+      fill: rgb(237, 94, 116);
+    }
+    &:hover {
+      background-color: rgb(237, 94, 116);
+      path {
+        fill: white;
+      }
+    }
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  .buttonsControl {
+    @include justifyCenter;
+    .pausePlay {
+      @include justifyCenter;
+      width: 50px;
+      height: 50px;
+      background-color: rgb(96, 85, 143);
+      svg {
+        width: 17px;
+        height: 17px;
+      }
+      path {
+        fill: $topMenuColor;
+      }
+    }
+    .previous, .next {
+      @include justifyCenter;
+      flex-direction: row;
+      width: 36px;
+      height: 36px;
+      background-color: rgb(96, 85, 143);
+      margin: 20px;
+    }
+  }
+}
+
+

@@ -1,5 +1,12 @@
 @import "screenDiv";
 
+.displayOn {
+	display: block;
+}
+.displayOff {
+	display: none;
+}
+
 .playlist {
 	@include screenDiv;
 }

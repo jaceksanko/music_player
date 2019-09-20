@@ -8,9 +8,15 @@ class Player extends React.Component {
   render() {
     return (
       <div className="player">
-        <HeaderPlayer/>
+        <HeaderPlayer
+          togglePlaylist={this.props.togglePlaylist}
+          playListDisplay={this.props.buttonsStatus.displayStatus}
+        />
         <ImageArtist/>
-        <FooterPlayer/>
+        <FooterPlayer
+          togglePlay={this.props.togglePlay}
+          playStatus={this.props.buttonsStatus.playStatus}
+        />
       </div>
     );
   }
