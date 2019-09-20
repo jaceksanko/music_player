@@ -1,5 +1,38 @@
-@import "screenDiv";
+@import 'screenDiv';
+$topMenuColor: rgb(255, 255, 255);
 
 .player {
-	@include screenDiv;
+  @include screenDiv;
+}
+
+.headerPlayer {
+  background-color: rgb(42, 34, 77);
+  opacity: 0.6;
+  //width: 360px;
+  height: 65px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .topOptions {
+    .random,
+    .redo,
+    .repeat {
+      fill: $topMenuColor;
+      width: 17px;
+      height: 16px;
+      margin: 0 20px;
+    }
+  }
+
+  .hamburgerMenu {
+    position: absolute;
+    right: 20px;
+    fill: $topMenuColor;
+    width: 17px;
+    height: 14px;
+    opacity: 0.302;
+  }
 }
