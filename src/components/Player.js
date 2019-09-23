@@ -10,12 +10,15 @@ class Player extends React.Component {
       <div className="player">
         <HeaderPlayer
           togglePlaylist={this.props.togglePlaylist}
-          playListDisplay={this.props.buttonsStatus.displayStatus}
+          playListDisplay={this.props.playListDisplay}
         />
         <ImageArtist/>
         <FooterPlayer
           togglePlay={this.props.togglePlay}
-          playStatus={this.props.buttonsStatus.playStatus}
+          playStatus={this.props.playStatus}
+          seekBarVolume={this.props.seekBarVolume}
+          changeSeekBar={this.props.changeSeekBar}
+          progressBar={this.props.progressBar}
         />
       </div>
     );

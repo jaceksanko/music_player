@@ -8,7 +8,15 @@ class App extends React.Component {
     buttonsStatus: {
       displayStatus: "displayOff",
       playStatus: "play"
+    },
+    seekBarVolume: {
+      volumeLevel: 50
+    },
+    progressBar: {
+      duration: 360,
+      progress: 260
     }
+    
   };
 
   togglePlaylist = () => {
@@ -31,16 +39,22 @@ class App extends React.Component {
     const buttonsStatus = {...this.state.buttonsStatus};
     switch (buttonsStatus.playStatus) {
       case "play":
-        buttonsStatus.displayStatus = "pause";
+        buttonsStatus.playStatus = "pause";
         break;
       case "pause":
-        buttonsStatus.displayStatus = "play";
+        buttonsStatus.playStatus = "play";
         break;
       default:
-        buttonsStatus.displayStatus = "pause";
+        buttonsStatus.playStatus = "pause";
     }
     this.setState({buttonsStatus});
   };
+
+  changeSeekBar = (element) => {
+    const seekBarVolume = {...this.state.seekBarVolume};
+    seekBarVolume.volumeLevel = element.target.value;
+    this.setState({seekBarVolume});
+  }
 
   render() {
     return (
@@ -50,8 +64,14 @@ class App extends React.Component {
           playListDisplay={this.state.buttonsStatus.displayStatus}
           togglePlay={this.togglePlay}
           playStatus={this.state.buttonsStatus.playStatus}
+          seekBarVolume={this.state.seekBarVolume}
+          changeSeekBar={this.changeSeekBar}
+          progressBar={this.state.progressBar}
         />
-        <Playlist playListDisplay={this.state.buttonsStatus.displayStatus}/>
+        <Playlist 
+          playListDisplay={this.state.buttonsStatus.displayStatus}
+          togglePlaylist={this.togglePlaylist}
+          />
       </main>
     );
   }

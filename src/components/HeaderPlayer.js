@@ -7,8 +7,7 @@ import HmburgerMenuSVG from "./svgComponents/HamburgerMenuSVG";
 
 class HeaderPlayer extends React.Component {
   render() {
-    const opacityClass = (this.props.buttonsStatus.displayStatus === "displayOn") ?
-      "opacityHamburgerMenu": "";
+    const opacityClass = (this.props.playListDisplay === "displayOn") ? "opacityHamburgerMenu": "";
     return (
       <div className="headerPlayer">
         <div className="topOptions">

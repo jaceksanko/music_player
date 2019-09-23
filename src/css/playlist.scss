@@ -1,5 +1,11 @@
 @import "screenDiv";
 
+@mixin justifyCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .displayOn {
 	display: block;
 }
@@ -8,5 +14,32 @@
 }
 
 .playlist {
-	@include screenDiv;
+  @include screenDiv;
+  .playListHeader {
+    @include justifyCenter;
+    position: relative;
+    height: 65px;
+    .arrow {
+      background-color: white;
+      border-radius: 50%;
+      border: none;
+      width: 35px;
+      height: 35px;
+      @include justifyCenter;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      outline: inherit;
+    }
+    h3 {
+      margin-top: 12px;
+      margin-bottom: 0;
+      font-size: 18px;
+      font-family: "Rambla";
+      color: rgb(96, 85, 143);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+  }
+  
 }
