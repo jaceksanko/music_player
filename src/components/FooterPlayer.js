@@ -36,7 +36,10 @@ class FooterPlayer extends React.Component {
         </button>
 
         <div className="buttonsControl">
-          <button className="previous">
+          <button
+            className="previous"
+            onClick={() => this.props.changeSongPrev()}
+          >
             <PreviousSVG/>
           </button>
           <div className="progressAndPausePlay">
@@ -47,7 +50,10 @@ class FooterPlayer extends React.Component {
           </div>
           
 
-          <button className="next">
+          <button
+            className="next"
+            onClick={() => this.props.changeSongNext()}
+          >
             <NextSVG/>
           </button>
         </div>

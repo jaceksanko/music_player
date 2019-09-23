@@ -12,8 +12,8 @@ class ImageArtist extends React.Component {
           <div className="imageFilter">
           </div>
           <div className="title">
-            <h1>Icona Pop</h1>
-            <h2>Still Dont't Know</h2>
+            <h1>{this.props.displaySong.nameArtist}</h1>
+            <h2>{this.props.displaySong.nameSong}</h2>
           </div>
       </div>
     );

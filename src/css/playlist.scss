@@ -35,11 +35,90 @@
       margin-top: 12px;
       margin-bottom: 0;
       font-size: 18px;
-      font-family: "Rambla";
+      font-family: "Rambla", sans-serif;
       color: rgb(96, 85, 143);
       font-weight: 700;
       line-height: 1.2;
     }
   }
-  
+  .playListSection {
+    max-height: 395px;
+    padding-right: 20px;
+    position: relative;
+    ::-webkit-scrollbar {
+      -webkit-appearance:none;
+      background: transparent;
+      width:7px;
+
+    }
+    ::-webkit-scrollbar-thumb {
+      width:7px;
+      background: rgba(42, 34, 77, 0.102);
+      border-radius: 25px;
+      height: 70px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(42, 34, 77, 0.202);
+    }
+    ::-webkit-scrollbar-corner {
+      display: none;
+    }
+    .bottomShadow {
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
+      width: 80%;
+      box-shadow: 8px -20px 20px 19px rgb(243, 244, 248);
+    }
+    .ulSongsList {
+      list-style-type: none;
+      padding-left: 20px;
+      padding-right: 30px;
+      overflow: scroll;
+      height: 395px;
+      .liSongsList {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(211, 213, 222);
+        padding: 20px 0;
+        .choseSong {
+          cursor: pointer;
+        }
+        .songDurationAndArtist {
+          font-size: 12px;
+          font-family: "Rambla", sans-serif;
+          color: rgb(120, 116, 127);
+          line-height: 1.2;
+        }
+        .songTitle {
+          font-size: 16px;
+          font-family: "Rambla", sans-serif;
+          color: rgb(47, 26, 75);
+          line-height: 1.2;
+          font-weight: 400;
+          margin-top: 3px;
+          margin-bottom: 0;
+        }
+        .songButton {
+          display: flex;
+          align-items: center;
+          .shareSong {
+            padding-right: 12px;
+            svg {
+              width: 13px;
+              height: 13px;
+            }
+            fill: rgb(96, 85, 143);
+          }
+          .favoriteSong  {
+            svg {
+              width: 15px;
+              height: 12px;
+            }
+            fill: rgb(237, 94, 116);
+          }
+        }
+      }
+    }
+  }
 }

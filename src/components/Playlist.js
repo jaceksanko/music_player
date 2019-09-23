@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/playlist.scss';
 import ArrowSVG from './svgComponents/ArrowSVG';
+import SongsList from './SongsList';
 
 class Playlist extends React.Component {
   render() {
@@ -17,8 +18,13 @@ class Playlist extends React.Component {
           <h3>Playlist</h3>
         </header>
         <section className="playListSection">
-          
+          <SongsList
+            playlist={this.props.playlist}
+            choseSong={this.props.choseSong}
+          />
+          <div className="bottomShadow"/>
         </section>
+
         
       </div>
     );
