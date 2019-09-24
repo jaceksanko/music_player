@@ -1,22 +1,17 @@
 import React from 'react';
 import ShareSVG from "./svgComponents/ShareSVG";
 import FavoriteSVG from "./svgComponents/FavoriteSVG";
+import { connect } from "react-redux";
+import {choseSong} from "../redux/actionsCreator";
 
 class SongsList extends React.Component {
-
   changeSecondToMMSS = (s) => {
     return(s-(s%=60))/60+(9<s?':':':0')+s
   };
 
   render() {
-    const { error, isLoaded, artist } = this.props.playlist;
-
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-      return <div>Loading...</div>;
-    } else {
-      return (
+    const { artist } = this.props;
+     return (
         <ul className="ulSongsList">
           {artist.songs.map(song => (
             <li key={song.id} className="liSongsList" >
@@ -33,15 +28,21 @@ class SongsList extends React.Component {
                 <div className="favoriteSong">
                   <FavoriteSVG/>
                 </div>
-
               </div>
-
             </li>
           ))}
         </ul>
-      );
-    }
+     );
+
   }
 }
 
-export default SongsList;
+const mapStateToProps = state => ({
+  artist: state.artist
+});
+
+const mapDispatchToProps = dispatch => ({
+  choseSong: (el) => dispatch(choseSong(el))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SongsList);

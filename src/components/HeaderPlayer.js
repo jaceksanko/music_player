@@ -5,6 +5,9 @@ import RedoSVG from "./svgComponents/RedoSVG";
 import RepeatSVG from "./svgComponents/RepeatSVG"
 import HmburgerMenuSVG from "./svgComponents/HamburgerMenuSVG";
 
+import { connect } from "react-redux";
+import { togglePlaylist } from "../redux/actionsCreator"
+
 class HeaderPlayer extends React.Component {
   render() {
     const opacityClass = (this.props.playListDisplay === "displayOn") ? "opacityHamburgerMenu": "";
@@ -23,4 +26,11 @@ class HeaderPlayer extends React.Component {
   }
 }
 
-export default HeaderPlayer;
+const mapStateToProps = state => ({
+  playListDisplay: state.displayStatus,
+});
+const mapDispatchToProps = dispatch => ({
+  togglePlaylist: () => dispatch(togglePlaylist())
+});
+
+export default connect(mapStateToProps,mapDispatchToProps)(HeaderPlayer);

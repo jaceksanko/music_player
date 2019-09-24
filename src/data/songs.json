@@ -1,0 +1,62 @@
+{
+  "artist": {
+    "name": "Icona Pop",
+    "songs": [
+      {
+        "id": "1",
+        "name": "Still Don't Know",
+        "duration": "196"
+      },
+      {
+        "id": "2",
+        "name": "I Love It",
+        "duration": "155"
+      },
+      {
+        "id": "3",
+        "name": "Girlfriend",
+        "duration": "170"
+      },
+      {
+        "id": "4",
+        "name": "We Got the World",
+        "duration": "187"
+      },
+      {
+        "id": "5",
+        "name": "Nights Like This",
+        "duration": "204"
+      },
+      {
+        "id": "6",
+        "name": "Nights Like This2",
+        "duration": "204"
+      },
+      {
+        "id": "7",
+        "name": "Nights Like This3",
+        "duration": "204"
+      },
+      {
+        "id": "8",
+        "name": "Still Don't Know",
+        "duration": "196"
+      },
+      {
+        "id": "9",
+        "name": "I Love It",
+        "duration": "155"
+      },
+      {
+        "id": "10",
+        "name": "Girlfriend",
+        "duration": "170"
+      },
+      {
+        "id": "11",
+        "name": "We Got the World",
+        "duration": "187"
+      }
+    ]
+  }
+}

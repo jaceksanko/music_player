@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/player.scss';
+import { connect } from "react-redux";
 
 class ImageArtist extends React.Component {
   render() {
@@ -12,12 +13,17 @@ class ImageArtist extends React.Component {
           <div className="imageFilter">
           </div>
           <div className="title">
-            <h1>{this.props.displaySong.nameArtist}</h1>
-            <h2>{this.props.displaySong.nameSong}</h2>
+            <h1>{this.props.nameArtist}</h1>
+            <h2>{this.props.nameSong}</h2>
           </div>
       </div>
     );
   }
 }
 
-export default ImageArtist;
+const mapStateToProps = state => ({
+  nameArtist: state.nameArtist,
+  nameSong: state.nameSong,
+});
+
+export default connect(mapStateToProps)(ImageArtist);

@@ -9,20 +9,20 @@ class Player extends React.Component {
     return (
       <div className="player">
         <HeaderPlayer
-          togglePlaylist={this.props.togglePlaylist}
-          playListDisplay={this.props.playListDisplay}
+          /*togglePlaylist={this.props.togglePlaylist}
+          playListDisplay={this.props.playListDisplay}*/
         />
         <ImageArtist
-          displaySong={this.props.displaySong}
+          //displaySong={this.props.displaySong}
         />
         <FooterPlayer
-          togglePlay={this.props.togglePlay}
+          /*togglePlay={this.props.togglePlay}
           playStatus={this.props.playStatus}
           seekBarVolume={this.props.seekBarVolume}
           changeSeekBar={this.props.changeSeekBar}
           progressBar={this.props.progressBar}
           changeSongNext={this.props.changeSongNext}
-          changeSongPrev={this.props.changeSongPrev}
+          changeSongPrev={this.props.changeSongPrev}*/
         />
       </div>
     );
