@@ -1,6 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Design choices
+I chose to ReactJS to render view and Redux to manage the state in an application. To write CSS I used preprocessor SASS and to write simple tests I used Jest with Enzyme.
 
-## Available Scripts
+I used create-react-app 
+ [Create React App](https://github.com/facebook/create-react-app) as a starter. 
+
+## Instruction
 
 In the project directory, you can run:
 ### `git clone https://github.com/jaceksanko/music_player.git`

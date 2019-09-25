@@ -3,7 +3,7 @@ export const TOGGLE_PLAYLIST = 'TOGGLE_PLAYLIST',
   CHANGE_SEEK_BAR = 'CHANGE_SEEK_BAR',
   CHANGE_SONG_NEXT = 'CHANGE_SONG_NEXT',
   CHANGE_SONG_PREV = 'CHANGE_SONG_PREV',
-  CHOSE_SONG = 'CHOSE_SONG';
+  CHOOSE_SONG = 'CHOSE_SONG';
 
 export const togglePlaylist = () => ({
   type: TOGGLE_PLAYLIST
@@ -26,7 +26,7 @@ export const changeSongPrev = () => ({
   type: CHANGE_SONG_PREV
 });
 
-export const choseSong = (songId) => ({
-  type: CHOSE_SONG,
+export const chooseSong = (songId) => ({
+  type: CHOOSE_SONG,
   payload: songId
 });

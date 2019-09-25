@@ -4,7 +4,7 @@ import {
   CHANGE_SEEK_BAR,
   CHANGE_SONG_NEXT,
   CHANGE_SONG_PREV,
-  CHOSE_SONG
+  CHOOSE_SONG
 } from './actionsCreator';
 
 const rootReducer = (state, action) => {
@@ -40,7 +40,7 @@ const rootReducer = (state, action) => {
           state.artist.songs[songsLength -1].name :
           state.artist.songs[idActualSong-1].name
       };
-    case CHOSE_SONG:
+    case CHOOSE_SONG:
       const songId = action.payload.currentTarget.dataset.id;
       return {
         ...state,

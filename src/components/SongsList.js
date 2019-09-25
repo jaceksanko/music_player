@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactComponent as ShareSVG } from "../images/share.svg";
 import { ReactComponent as FavoriteSVG } from "../images/favorite.svg";
 import { connect } from "react-redux";
-import {choseSong} from "../redux/actionsCreator";
+import {chooseSong} from "../redux/actionsCreator";
 
 class SongsList extends React.Component {
   changeSecondToMMSS = (s) => {
@@ -42,7 +42,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  choseSong: (el) => dispatch(choseSong(el))
+  choseSong: (el) => dispatch(chooseSong(el))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SongsList);
