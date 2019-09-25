@@ -14,7 +14,7 @@ const defaultState = {
   artist: data.artist
 };
 
-const middlewares = [logger];
+export const middlewares = [logger];
 
 const store = createStore(rootReducer, defaultState, applyMiddleware(...middlewares));
 
