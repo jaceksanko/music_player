@@ -1,9 +1,9 @@
 import React from 'react';
 import '../css/player.scss';
-import ShareSVG from "./svgComponents/ShareSVG";
-import PreviousSVG from "./svgComponents/PreviousSVG";
-import NextSVG from "./svgComponents/NextSVG";
-import FavoriteSVG from "./svgComponents/FavoriteSVG";
+import { ReactComponent as ShareSVG } from "../images/share.svg";
+import { ReactComponent as PreviousSVG } from "../images/previous.svg";
+import { ReactComponent as NextSVG } from "../images/next.svg";
+import { ReactComponent as FavoriteSVG } from "../images/favorite.svg";
 import { ReactComponent as PlaySVG } from "../images/play2.svg";
 import { ReactComponent as PauseSVG } from "../images/pause.svg";
 

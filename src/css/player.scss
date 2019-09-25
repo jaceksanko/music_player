@@ -19,12 +19,13 @@ $topMenuColor: rgb(255, 255, 255);
 .player {
   @include screenDiv;
   position: relative;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
 }
 
 .headerPlayer {
   width: 100%;
   background-color: rgba(42, 34, 77, 0.6);
-  box-shadow: 1px 0 1px 0 rgb(42, 34, 77);
   height: 65px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -34,11 +35,13 @@ $topMenuColor: rgb(255, 255, 255);
     .random,
     .redo,
     .repeat {
-      fill: $topMenuColor;
-      width: 17px;
-      height: 16px;
       margin: 0 20px;
       cursor: pointer;
+      width: 17px;
+      height: 16px;
+      path {
+        fill: $topMenuColor;
+      }
     }
   }
   .hamburgerMenu {
@@ -75,6 +78,9 @@ $topMenuColor: rgb(255, 255, 255);
       margin: 0;
       -webkit-appearance: none;
       width: 361px;
+      @media (max-width: 360px) {
+        width: 341px;
+      }
       height: 8px;
       outline: none;
       -webkit-transition: 0.2s;
@@ -221,6 +227,13 @@ $topMenuColor: rgb(255, 255, 255);
       margin: 20px;
       cursor: pointer;
       @include buttonsControlActive;
+      svg {
+        width: 13px;
+        height: 13px;
+      }
+      path {
+        fill: $topMenuColor;
+      }
     }
   }
 }
@@ -233,6 +246,9 @@ $topMenuColor: rgb(255, 255, 255);
   }
   .imageFilter {
     width: 350px;
+    @media (max-width: 360px) {
+      width: 330px;
+    }
     background-color: rgba(84, 66, 130, 0.259);;
     height: 235px;
     position: absolute;

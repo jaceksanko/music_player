@@ -6,11 +6,23 @@
   justify-content: center;
 }
 
+@keyframes fade-in {
+  from { 
+    opacity: 0; 
+  }
+  to { 
+    opacity: 1; 
+  }
+}
+
+
+
 .displayOn {
 	display: block;
+  animation: fade-in 2s;
 }
 .displayOff {
-	display: none;
+  display: none;
 }
 
 .playlist {
@@ -30,6 +42,12 @@
       left: 20px;
       top: 20px;
       outline: inherit;
+      cursor: pointer;
+      svg {
+        width: 16px;
+        height: 11px;
+        fill: rgb(96, 85, 143);
+      }
     }
     h3 {
       margin-top: 12px;

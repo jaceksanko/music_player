@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/playlist.scss';
-import ArrowSVG from './svgComponents/ArrowSVG';
+import { ReactComponent as ArrowSVG } from "../images/arrow.svg";
 import SongsList from './SongsList';
 import { connect } from "react-redux";
 import { togglePlaylist } from "../redux/actionsCreator"
@@ -20,10 +20,7 @@ class Playlist extends React.Component {
           <h3>Playlist</h3>
         </header>
         <section className="playListSection">
-          <SongsList
-            /*playlist={this.props.playlist}
-            choseSong={this.props.choseSong}*/
-          />
+          <SongsList/>
           <div className="bottomShadow"/>
         </section>
 

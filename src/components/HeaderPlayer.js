@@ -1,9 +1,9 @@
 import React from 'react';
 import '../css/player.scss';
-import RandomSVG from "./svgComponents/RandomSVG";
-import RedoSVG from "./svgComponents/RedoSVG";
-import RepeatSVG from "./svgComponents/RepeatSVG"
-import HmburgerMenuSVG from "./svgComponents/HamburgerMenuSVG";
+import { ReactComponent as RandomSVG } from "../images/random.svg";
+import { ReactComponent as RedoSVG } from "../images/redo.svg";
+import { ReactComponent as RepeatSVG } from "../images/repeat.svg";
+import HmburgerMenuSVG from "../images/HamburgerMenuSVG";
 
 import { connect } from "react-redux";
 import { togglePlaylist } from "../redux/actionsCreator"

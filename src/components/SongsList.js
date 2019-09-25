@@ -1,6 +1,6 @@
 import React from 'react';
-import ShareSVG from "./svgComponents/ShareSVG";
-import FavoriteSVG from "./svgComponents/FavoriteSVG";
+import { ReactComponent as ShareSVG } from "../images/share.svg";
+import { ReactComponent as FavoriteSVG } from "../images/favorite.svg";
 import { connect } from "react-redux";
 import {choseSong} from "../redux/actionsCreator";
 
