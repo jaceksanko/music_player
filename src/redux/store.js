@@ -14,7 +14,11 @@ const defaultState = {
   artist: data.artist
 };
 
-export const middlewares = [logger];
+export const middlewares = [];
+
+if (process.env.NODE_ENV === 'development') {
+  middlewares.push(logger)
+}
 
 const store = createStore(rootReducer, defaultState, applyMiddleware(...middlewares));
 
